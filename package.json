@@ -1,0 +1,11 @@
+{
+  "name": "vercel-express-server",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node api/index.js"
+  },
+  "dependencies": {
+    "express": "^4.22.1",
+    "openai": "^6.21.0"
+  }
+}
