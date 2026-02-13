@@ -26,11 +26,13 @@ app.post("/api/chat", handleChat);
 const port = process.env.PORT || 3000;
 
 // Chỉ chạy app.listen khi ở môi trường local (development)
-if (process.env.NODE_ENV !== "production") {
-  app.listen(port, () => {
-    console.log(`Server running locally on port ${port}`);
-  });
-}
-
+// if (process.env.NODE_ENV !== "production") {
+//   app.listen(port, () => {
+//     console.log(`Server running locally on port ${port}`);
+//   });
+// }
+app.listen(port, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 // Export app để Vercel handler có thể bắt được request
 module.exports = app;
