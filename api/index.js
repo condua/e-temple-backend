@@ -4,9 +4,27 @@ const cors = require("cors");
 const { handleChat } = require("../controllers/chatController");
 
 // Route cho chat sử dụng OpenAI
-app.use(cors()); // Cho phép tất cả các domain truy cập
 // Middleware (nếu cần)
 app.use(express.json());
+
+// Danh sách các domain được phép (Whitelist)
+const whitelist = [
+  "e-temple-phi.vercel.app",
+  "http://localhost:3000",
+  "http://localhost:5173",
+];
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Nếu origin nằm trong whitelist HOẶC không có origin (ví dụ: gọi từ Postman, Server-to-Server, Mobile App)
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Không được phép bởi CORS")); // Chặn ngay lập tức
+    }
+  },
+};
+
+app.use(cors(corsOptions));
 
 // Route cơ bản
 app.get("/", (req, res) => {
