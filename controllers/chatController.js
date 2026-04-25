@@ -6,6 +6,7 @@ const openai = new OpenAI({
 
 const handleChat = async (req, res) => {
   try {
+    // Lấy message từ body request
     const { message } = req.body;
 
     if (!message) {
