@@ -18,6 +18,7 @@ exports.createUser = async (req, res) => {
     // Log để kiểm tra dữ liệu nhận được
     console.log("Body nhận được:", req.body);
 
+    //kiểm tra xem có thiểu tên hoặc ngày sinh hay không
     if (!name || !dob) {
       return res.status(400).json({ message: "Thiếu tên hoặc ngày sinh" });
     }
