@@ -16,5 +16,5 @@ const UserSchema = new mongoose.Schema({
   },
 });
 
-// Kiểm tra nếu model đã tồn tại (----------- tránh lỗi trên Vercel khi hot-reload -------)
+// Kiểm tra nếu model đã tồn tại (----------- tránh lỗi trên Vercel khi hot-reload -----------)
 module.exports = mongoose.models.User || mongoose.model("User", UserSchema);
