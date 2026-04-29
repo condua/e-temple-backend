@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema({
     trim: true,
   },
   dob: {
-    type: Date, // Ngày tháng năm sinh dd/mm/yyyy
+    type: Date, // Ngày tháng năm sinh dd/mm/yyyy ----
     required: true,
   },
   createdAt: {
