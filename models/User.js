@@ -12,7 +12,7 @@ const UserSchema = new mongoose.Schema({
   },
   createdAt: {
     type: Date,
-    default: Date.now, // Tự động lấy ngày hiện tại khi tạo
+    default: Date.now, // Tự động lấy ngày hiện tại khi tạo ----
   },
 });
 
