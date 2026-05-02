@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// 3. Cấu hình CORS cho các trang liên quan
+// 3. Cấu hình CORS cho các trang liên quan ------
 const whitelist = [
   "https://e-temple-phi.vercel.app",
   "http://localhost:3000",
