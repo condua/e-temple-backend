@@ -9,7 +9,7 @@ const { getUsers, createUser } = require("../controllers/userController");
 
 const app = express();
 
-// 2. Middleware cơ bản (Phải đặt lên đầu)
+// 2. Middleware cơ bản (Phải đặt lên đầu--------)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
