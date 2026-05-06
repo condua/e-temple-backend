@@ -47,7 +47,7 @@ app.use(async (req, res, next) => {
   next();
 });
 
-// 5. Định nghĩa Routes (Xóa bỏ các route trùng lặp)
+// 5. Định nghĩa Routes (Xóa bỏ các route trùng lặp) -------
 app.get("/", (req, res) => {
   res.send("API MongoDB is running with Controllers!");
 });
