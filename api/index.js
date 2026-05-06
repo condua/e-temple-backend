@@ -30,7 +30,7 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-// 4. Kết nối MongoDB (Hàm tối ưu cho Serverless)
+// 4. Kết nối MongoDB (Hàm tối ưu cho Serverless) --------
 const connectDB = async () => {
   if (mongoose.connection.readyState >= 1) return;
   try {
