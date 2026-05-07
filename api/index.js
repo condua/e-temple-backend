@@ -41,7 +41,7 @@ const connectDB = async () => {
   }
 };
 
-// Middleware kết nối DB cho mọi request -----
+// Middleware kết nối DB cho mọi request ----------
 app.use(async (req, res, next) => {
   await connectDB();
   next();
