@@ -59,7 +59,7 @@ app.post("/api/chat", handleChat);
 app.get("/api/users", getUsers);
 app.post("/api/users", createUser);
 
-// 6. Xử lý Port và listen (Chỉ chạy khi ở Local)
+// 6. Xử lý Port và listen (Chỉ chạy khi ở Local) -----
 const port = process.env.PORT || 3000;
 if (process.env.NODE_ENV !== "production") {
   app.listen(port, () => {
