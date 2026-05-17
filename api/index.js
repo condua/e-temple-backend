@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 // 3. Cấu hình CORS cho các trang liên quan ----------------------------
 const whitelist = [
   "https://e-temple-phi.vercel.app",
+  "https://funenglishgames-sand.vercel.app",
   "http://localhost:3000",
   "http://localhost:5173",
 ];
